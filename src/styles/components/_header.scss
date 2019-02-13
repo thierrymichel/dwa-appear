@@ -1,0 +1,46 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding-right: .25em;
+  background-color: $c-dark;
+  color: $c-white;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+  }
+
+  &::before {
+    content: '>';
+    font-size: 5rem;
+    transform: translate(-.8rem, .2rem) scaleX(.5) rotate(90deg);
+  }
+
+  &::after {
+    display: block;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 2px solid $c-white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.header__title {
+  text-align: center;
+  will-change: transform, opacity;
+
+  strong {
+    display: block;
+    font-size: 1.5em;
+    will-change: transform, opacity;
+  }
+}

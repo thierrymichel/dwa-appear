@@ -1,0 +1,52 @@
+.gangsta,
+[class*='gangsta--'] {
+  display: flex;
+
+  > * {
+    flex-basis: 50%;
+  }
+}
+
+[class*='gangsta--'][class*='--reverse'] {
+  flex-direction: row-reverse;
+}
+
+.gangsta__picture-outer {
+  position: relative;
+  overflow: hidden;
+}
+
+.gangsta__picture {
+  @include image-fit;
+
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.gangsta__details {
+  @include owl;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6rem 6rem 4rem;
+
+  > * {
+    will-change: transform, opacity;
+  }
+}
+
+.gangsta__details__name {
+  margin-bottom: 0;
+  font-size: 2.4em;
+  font-weight: normal;
+}
+
+.gangsta__details__action {
+  display: block;
+  align-self: flex-end;
+  padding: 1.25rem 2rem;
+  background-color: $c-green;
+  color: $c-white;
+  text-decoration: none;
+}
